@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Budget Tesla</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/images/favicon.jpg">
+  <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+
+</head>
+<body  id='body'>
+<!-- Header -->
+<header>
+  <nav>
+    <div class="nav-wrapper green lighten-4">
+      <img src="./assets/images/tesla_logo.PNG" class="brand-logo center logo">
+    </div>
+    <p>Effortless charger locating for the Tesla driver who needs to budget their time.</p>
+  </nav>
+ </header>
+<!-- Map display and list -->
+<div>
+<iframe src="https://map.openchargemap.io/?mode=embedded" allow="geolocation" frameborder="0" width="100%"
+  height="500px"></iframe>
+</div>
+ <!-- Input -->
+  <div id="choose-my-car" class="container">
+      <div class="card grey lighten-3 z-depth-2">
+        <div class="card-content">
+          <div class="row">
+            <div class="section">
+              <h5>Quote of The Day</h5>
+              <p id="quote"></p>
+              <p id="author"></p>
+            <h5>5 Day Weather Forecast</h5>
+            <p>Tesla drivers deserve only the best weather.</p>
+              <p>
+            </div>
+                <label for="location">Enter City</label>
+                <input type="text" name="city" id="city">
+              </p>
+              <p>
+                <button class="waves-effect waves-light btn green lighten-4 black-text" id="searchCity">Search City</button>
+              </p>       
+              <div id="displayWeather"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- My Car Display -->
+<div class="container">
+  <div class="card grey lighten-3 z-depth-2">
+    <div class="card-content">
+      <button id="car-details-btn" class="waves-effect waves-light btn green lighten-4 black-text">Choose My Car(s)</button>
+      <ul id="car-details" class="collection with-header">
+      </ul>
+    </div>
+    <div class="card-content">
+      <h5>My Car(s)</h5>
+        <div id="my-car" class="section my-car-container"></div>
+    </div>
+  </div>
+</div>
+  <div>
+    <button id="destroy" class="btn red">Delete Website</button>
+  </div>
+<footer>
+  <!-- Moment() -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- app js -->
+  <script src="./assets/js/app.js"></script>
+  </script>
+  </footer>
+</body>
+</html>
